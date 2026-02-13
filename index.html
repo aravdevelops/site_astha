@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Focus Tracker</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0e6d6;
+      padding: 100px;
+      text-align: center;
+    }
+
+    .box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    .box2 {
+      background-color: #6f4e37;
+      padding: 20px;
+      border-radius: 50px;
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+
+        .box3 {
+      background-color: #813600;
+      padding: 10px;
+      border-radius: 90px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+   .box2 img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px;
+   }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+          <div class="box3">
+        <p>Resets: <span id="resetCount">0</span></p>
+          </div>
+  <div class="box">
+    <h1>Focus Points</h1>
+    <h2 id="points">100</h2>
+
+    <button onclick="loseFocus()">I Lost Focus 😵</button>
+
+      <div class="box2">
+        <h3> Don't you want that 9 SG?</h3>
+        <img src="img1.jpeg">
+        <img src="img2.jpeg">
+    </div>
+  <script>
+    let focusPoints = 100;
+    let resetCount = 0;
+    function loseFocus() {
+      focusPoints = focusPoints - 10;
+      if (focusPoints <= 0) {
+        alert("Reset hogaya!!");
+      
+        focusPoints = 100;
+        resetCount = resetCount+1;
+                document.getElementById("resetCount").innerText = resetCount;
+                if(resetCount == 2){
+                  alert("Padh le life me kuch karna hai toh!");
+                }
+                if(resetCount >= 3){
+                  alert("Bhai Chhod hi de tu padhna!!");
+                }
+      }
+
+      document.getElementById("points").innerText = focusPoints;
+    }
+  </script>
+
+    </div>
+
+
+</body>
+</html>
+
+
+
+
